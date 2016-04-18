@@ -139,13 +139,13 @@ NET_EXPORT_PRIVATE extern const char* const kFinalOffsetHeaderKey;
 const int64_t kMaxDelayedAckTimeMs = 25;
 
 // The timeout before the handshake succeeds.
-const int64_t kInitialIdleTimeoutSecs = 5;
+const int64_t kInitialIdleTimeoutSecs = 5 * 2;
 // The default idle timeout.
-const int64_t kDefaultIdleTimeoutSecs = 30;
+const int64_t kDefaultIdleTimeoutSecs = 30 * 2;
 // The maximum idle timeout that can be negotiated.
 const int64_t kMaximumIdleTimeoutSecs = 60 * 10;  // 10 minutes.
 // The default timeout for a connection until the crypto handshake succeeds.
-const int64_t kMaxTimeForCryptoHandshakeSecs = 10;  // 10 secs.
+const int64_t kMaxTimeForCryptoHandshakeSecs = 10 * 2;  // 20 secs.
 
 // Default limit on the number of undecryptable packets the connection buffers
 // before the CHLO/SHLO arrive.
