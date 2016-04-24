@@ -24,11 +24,12 @@
 #include <google/protobuf/repeated_field.h>
 #include <google/protobuf/extension_set.h>
 // @@protoc_insertion_point(includes)
+#include "net/base/net_export.h"
 
 namespace net {
 
 // Internal implementation detail -- do not call these.
-void  protobuf_AddDesc_cached_5fnetwork_5fparameters_2eproto();
+void NET_EXPORT_PRIVATE protobuf_AddDesc_cached_5fnetwork_5fparameters_2eproto();
 void protobuf_AssignDesc_cached_5fnetwork_5fparameters_2eproto();
 void protobuf_ShutdownFile_cached_5fnetwork_5fparameters_2eproto();
 
@@ -38,14 +39,14 @@ enum CachedNetworkParameters_PreviousConnectionState {
   CachedNetworkParameters_PreviousConnectionState_SLOW_START = 0,
   CachedNetworkParameters_PreviousConnectionState_CONGESTION_AVOIDANCE = 1
 };
-bool CachedNetworkParameters_PreviousConnectionState_IsValid(int value);
+NET_EXPORT_PRIVATE bool CachedNetworkParameters_PreviousConnectionState_IsValid(int value);
 const CachedNetworkParameters_PreviousConnectionState CachedNetworkParameters_PreviousConnectionState_PreviousConnectionState_MIN = CachedNetworkParameters_PreviousConnectionState_SLOW_START;
 const CachedNetworkParameters_PreviousConnectionState CachedNetworkParameters_PreviousConnectionState_PreviousConnectionState_MAX = CachedNetworkParameters_PreviousConnectionState_CONGESTION_AVOIDANCE;
 const int CachedNetworkParameters_PreviousConnectionState_PreviousConnectionState_ARRAYSIZE = CachedNetworkParameters_PreviousConnectionState_PreviousConnectionState_MAX + 1;
 
 // ===================================================================
 
-class CachedNetworkParameters : public ::google::protobuf::MessageLite {
+class NET_EXPORT_PRIVATE CachedNetworkParameters : public ::google::protobuf::MessageLite {
  public:
   CachedNetworkParameters();
   virtual ~CachedNetworkParameters();
@@ -194,9 +195,9 @@ class CachedNetworkParameters : public ::google::protobuf::MessageLite {
   ::google::protobuf::uint32 _has_bits_[(7 + 31) / 32];
 
   #ifdef GOOGLE_PROTOBUF_NO_STATIC_INITIALIZER
-  friend void  protobuf_AddDesc_cached_5fnetwork_5fparameters_2eproto_impl();
+  friend void NET_EXPORT_PRIVATE protobuf_AddDesc_cached_5fnetwork_5fparameters_2eproto_impl();
   #else
-  friend void  protobuf_AddDesc_cached_5fnetwork_5fparameters_2eproto();
+  friend void NET_EXPORT_PRIVATE protobuf_AddDesc_cached_5fnetwork_5fparameters_2eproto();
   #endif
   friend void protobuf_AssignDesc_cached_5fnetwork_5fparameters_2eproto();
   friend void protobuf_ShutdownFile_cached_5fnetwork_5fparameters_2eproto();
@@ -222,7 +223,7 @@ inline void CachedNetworkParameters::clear_has_serving_region() {
   _has_bits_[0] &= ~0x00000001u;
 }
 inline void CachedNetworkParameters::clear_serving_region() {
-  if (serving_region_ != &::google::protobuf::internal::kEmptyString) {
+  if (serving_region_ != &::google::protobuf::internal::GetEmptyString()) {
     serving_region_->clear();
   }
   clear_has_serving_region();
@@ -232,44 +233,44 @@ inline const ::std::string& CachedNetworkParameters::serving_region() const {
 }
 inline void CachedNetworkParameters::set_serving_region(const ::std::string& value) {
   set_has_serving_region();
-  if (serving_region_ == &::google::protobuf::internal::kEmptyString) {
+  if (serving_region_ == &::google::protobuf::internal::GetEmptyString()) {
     serving_region_ = new ::std::string;
   }
   serving_region_->assign(value);
 }
 inline void CachedNetworkParameters::set_serving_region(const char* value) {
   set_has_serving_region();
-  if (serving_region_ == &::google::protobuf::internal::kEmptyString) {
+  if (serving_region_ == &::google::protobuf::internal::GetEmptyString()) {
     serving_region_ = new ::std::string;
   }
   serving_region_->assign(value);
 }
 inline void CachedNetworkParameters::set_serving_region(const char* value, size_t size) {
   set_has_serving_region();
-  if (serving_region_ == &::google::protobuf::internal::kEmptyString) {
+  if (serving_region_ == &::google::protobuf::internal::GetEmptyString()) {
     serving_region_ = new ::std::string;
   }
   serving_region_->assign(reinterpret_cast<const char*>(value), size);
 }
 inline ::std::string* CachedNetworkParameters::mutable_serving_region() {
   set_has_serving_region();
-  if (serving_region_ == &::google::protobuf::internal::kEmptyString) {
+  if (serving_region_ == &::google::protobuf::internal::GetEmptyString()) {
     serving_region_ = new ::std::string;
   }
   return serving_region_;
 }
 inline ::std::string* CachedNetworkParameters::release_serving_region() {
   clear_has_serving_region();
-  if (serving_region_ == &::google::protobuf::internal::kEmptyString) {
+  if (serving_region_ == &::google::protobuf::internal::GetEmptyString()) {
     return NULL;
   } else {
     ::std::string* temp = serving_region_;
-    serving_region_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
+    serving_region_ = const_cast< ::std::string*>(&::google::protobuf::internal::GetEmptyString());
     return temp;
   }
 }
 inline void CachedNetworkParameters::set_allocated_serving_region(::std::string* serving_region) {
-  if (serving_region_ != &::google::protobuf::internal::kEmptyString) {
+  if (serving_region_ != &::google::protobuf::internal::GetEmptyString()) {
     delete serving_region_;
   }
   if (serving_region) {
@@ -277,7 +278,7 @@ inline void CachedNetworkParameters::set_allocated_serving_region(::std::string*
     serving_region_ = serving_region;
   } else {
     clear_has_serving_region();
-    serving_region_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
+    serving_region_ = const_cast< ::std::string*>(&::google::protobuf::internal::GetEmptyString());
   }
 }
 
