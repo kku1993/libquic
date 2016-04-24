@@ -42,7 +42,7 @@ void protobuf_AddDesc_source_5faddress_5ftoken_2eproto() {
 #ifdef GOOGLE_PROTOBUF_NO_STATIC_INITIALIZER
 GOOGLE_PROTOBUF_DECLARE_ONCE(protobuf_AddDesc_source_5faddress_5ftoken_2eproto_once_);
 void protobuf_AddDesc_source_5faddress_5ftoken_2eproto() {
-  ::google::protobuf::GoogleOnceInit(&protobuf_AddDesc_source_5faddress_5ftoken_2eproto_once_,
+  ::google::protobuf::::google::protobuf::GoogleOnceInit(&protobuf_AddDesc_source_5faddress_5ftoken_2eproto_once_,
                  &protobuf_AddDesc_source_5faddress_5ftoken_2eproto_impl);
 }
 #else
@@ -56,7 +56,7 @@ struct StaticDescriptorInitializer_source_5faddress_5ftoken_2eproto {
 
 // ===================================================================
 
-#if !defined(_MSC_VER) || _MSC_VER >= 1900
+#ifndef _MSC_VER
 const int SourceAddressToken::kIpFieldNumber;
 const int SourceAddressToken::kTimestampFieldNumber;
 const int SourceAddressToken::kCachedNetworkParametersFieldNumber;
@@ -84,7 +84,7 @@ SourceAddressToken::SourceAddressToken(const SourceAddressToken& from)
 
 void SourceAddressToken::SharedCtor() {
   _cached_size_ = 0;
-  ip_ = const_cast< ::std::string*>(&::google::protobuf::internal::GetEmptyString());
+  ip_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
   timestamp_ = GOOGLE_LONGLONG(0);
   cached_network_parameters_ = NULL;
   ::memset(_has_bits_, 0, sizeof(_has_bits_));
@@ -95,7 +95,7 @@ SourceAddressToken::~SourceAddressToken() {
 }
 
 void SourceAddressToken::SharedDtor() {
-  if (ip_ != &::google::protobuf::internal::GetEmptyString()) {
+  if (ip_ != &::google::protobuf::internal::kEmptyString) {
     delete ip_;
   }
   #ifdef GOOGLE_PROTOBUF_NO_STATIC_INITIALIZER
@@ -130,7 +130,7 @@ SourceAddressToken* SourceAddressToken::New() const {
 void SourceAddressToken::Clear() {
   if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
     if (has_ip()) {
-      if (ip_ != &::google::protobuf::internal::GetEmptyString()) {
+      if (ip_ != &::google::protobuf::internal::kEmptyString) {
         ip_->clear();
       }
     }
@@ -197,7 +197,7 @@ bool SourceAddressToken::MergePartialFromCodedStream(
             ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
           return true;
         }
-        DO_(::google::protobuf::internal::WireFormatLite::SkipField(input, tag, NULL));
+        DO_(::google::protobuf::internal::WireFormatLite::SkipField(input, tag));
         break;
       }
     }
@@ -308,7 +308,7 @@ void SourceAddressToken::Swap(SourceAddressToken* other) {
 
 // ===================================================================
 
-#if !defined(_MSC_VER) || _MSC_VER >= 1900
+#ifndef _MSC_VER
 const int SourceAddressTokens::kTokensFieldNumber;
 #endif  // !_MSC_VER
 
@@ -396,7 +396,7 @@ bool SourceAddressTokens::MergePartialFromCodedStream(
             ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
           return true;
         }
-        DO_(::google::protobuf::internal::WireFormatLite::SkipField(input, tag, NULL));
+        DO_(::google::protobuf::internal::WireFormatLite::SkipField(input, tag));
         break;
       }
     }

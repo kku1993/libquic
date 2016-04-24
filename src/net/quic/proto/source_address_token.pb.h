@@ -25,12 +25,11 @@
 #include <google/protobuf/extension_set.h>
 #include "cached_network_parameters.pb.h"
 // @@protoc_insertion_point(includes)
-#include "net/base/net_export.h"
 
 namespace net {
 
 // Internal implementation detail -- do not call these.
-void NET_EXPORT_PRIVATE protobuf_AddDesc_source_5faddress_5ftoken_2eproto();
+void  protobuf_AddDesc_source_5faddress_5ftoken_2eproto();
 void protobuf_AssignDesc_source_5faddress_5ftoken_2eproto();
 void protobuf_ShutdownFile_source_5faddress_5ftoken_2eproto();
 
@@ -39,7 +38,7 @@ class SourceAddressTokens;
 
 // ===================================================================
 
-class NET_EXPORT_PRIVATE SourceAddressToken : public ::google::protobuf::MessageLite {
+class SourceAddressToken : public ::google::protobuf::MessageLite {
  public:
   SourceAddressToken();
   virtual ~SourceAddressToken();
@@ -137,9 +136,9 @@ class NET_EXPORT_PRIVATE SourceAddressToken : public ::google::protobuf::Message
   ::google::protobuf::uint32 _has_bits_[(3 + 31) / 32];
 
   #ifdef GOOGLE_PROTOBUF_NO_STATIC_INITIALIZER
-  friend void NET_EXPORT_PRIVATE protobuf_AddDesc_source_5faddress_5ftoken_2eproto_impl();
+  friend void  protobuf_AddDesc_source_5faddress_5ftoken_2eproto_impl();
   #else
-  friend void NET_EXPORT_PRIVATE protobuf_AddDesc_source_5faddress_5ftoken_2eproto();
+  friend void  protobuf_AddDesc_source_5faddress_5ftoken_2eproto();
   #endif
   friend void protobuf_AssignDesc_source_5faddress_5ftoken_2eproto();
   friend void protobuf_ShutdownFile_source_5faddress_5ftoken_2eproto();
@@ -149,7 +148,7 @@ class NET_EXPORT_PRIVATE SourceAddressToken : public ::google::protobuf::Message
 };
 // -------------------------------------------------------------------
 
-class NET_EXPORT_PRIVATE SourceAddressTokens : public ::google::protobuf::MessageLite {
+class SourceAddressTokens : public ::google::protobuf::MessageLite {
  public:
   SourceAddressTokens();
   virtual ~SourceAddressTokens();
@@ -223,9 +222,9 @@ class NET_EXPORT_PRIVATE SourceAddressTokens : public ::google::protobuf::Messag
   ::google::protobuf::uint32 _has_bits_[(1 + 31) / 32];
 
   #ifdef GOOGLE_PROTOBUF_NO_STATIC_INITIALIZER
-  friend void NET_EXPORT_PRIVATE protobuf_AddDesc_source_5faddress_5ftoken_2eproto_impl();
+  friend void  protobuf_AddDesc_source_5faddress_5ftoken_2eproto_impl();
   #else
-  friend void NET_EXPORT_PRIVATE protobuf_AddDesc_source_5faddress_5ftoken_2eproto();
+  friend void  protobuf_AddDesc_source_5faddress_5ftoken_2eproto();
   #endif
   friend void protobuf_AssignDesc_source_5faddress_5ftoken_2eproto();
   friend void protobuf_ShutdownFile_source_5faddress_5ftoken_2eproto();
@@ -251,7 +250,7 @@ inline void SourceAddressToken::clear_has_ip() {
   _has_bits_[0] &= ~0x00000001u;
 }
 inline void SourceAddressToken::clear_ip() {
-  if (ip_ != &::google::protobuf::internal::GetEmptyString()) {
+  if (ip_ != &::google::protobuf::internal::kEmptyString) {
     ip_->clear();
   }
   clear_has_ip();
@@ -261,44 +260,44 @@ inline const ::std::string& SourceAddressToken::ip() const {
 }
 inline void SourceAddressToken::set_ip(const ::std::string& value) {
   set_has_ip();
-  if (ip_ == &::google::protobuf::internal::GetEmptyString()) {
+  if (ip_ == &::google::protobuf::internal::kEmptyString) {
     ip_ = new ::std::string;
   }
   ip_->assign(value);
 }
 inline void SourceAddressToken::set_ip(const char* value) {
   set_has_ip();
-  if (ip_ == &::google::protobuf::internal::GetEmptyString()) {
+  if (ip_ == &::google::protobuf::internal::kEmptyString) {
     ip_ = new ::std::string;
   }
   ip_->assign(value);
 }
 inline void SourceAddressToken::set_ip(const void* value, size_t size) {
   set_has_ip();
-  if (ip_ == &::google::protobuf::internal::GetEmptyString()) {
+  if (ip_ == &::google::protobuf::internal::kEmptyString) {
     ip_ = new ::std::string;
   }
   ip_->assign(reinterpret_cast<const char*>(value), size);
 }
 inline ::std::string* SourceAddressToken::mutable_ip() {
   set_has_ip();
-  if (ip_ == &::google::protobuf::internal::GetEmptyString()) {
+  if (ip_ == &::google::protobuf::internal::kEmptyString) {
     ip_ = new ::std::string;
   }
   return ip_;
 }
 inline ::std::string* SourceAddressToken::release_ip() {
   clear_has_ip();
-  if (ip_ == &::google::protobuf::internal::GetEmptyString()) {
+  if (ip_ == &::google::protobuf::internal::kEmptyString) {
     return NULL;
   } else {
     ::std::string* temp = ip_;
-    ip_ = const_cast< ::std::string*>(&::google::protobuf::internal::GetEmptyString());
+    ip_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
     return temp;
   }
 }
 inline void SourceAddressToken::set_allocated_ip(::std::string* ip) {
-  if (ip_ != &::google::protobuf::internal::GetEmptyString()) {
+  if (ip_ != &::google::protobuf::internal::kEmptyString) {
     delete ip_;
   }
   if (ip) {
@@ -306,7 +305,7 @@ inline void SourceAddressToken::set_allocated_ip(::std::string* ip) {
     ip_ = ip;
   } else {
     clear_has_ip();
-    ip_ = const_cast< ::std::string*>(&::google::protobuf::internal::GetEmptyString());
+    ip_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
   }
 }
 

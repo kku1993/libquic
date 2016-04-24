@@ -38,7 +38,7 @@ void protobuf_AddDesc_cached_5fnetwork_5fparameters_2eproto() {
 #ifdef GOOGLE_PROTOBUF_NO_STATIC_INITIALIZER
 GOOGLE_PROTOBUF_DECLARE_ONCE(protobuf_AddDesc_cached_5fnetwork_5fparameters_2eproto_once_);
 void protobuf_AddDesc_cached_5fnetwork_5fparameters_2eproto() {
-  ::google::protobuf::GoogleOnceInit(&protobuf_AddDesc_cached_5fnetwork_5fparameters_2eproto_once_,
+  ::google::protobuf::::google::protobuf::GoogleOnceInit(&protobuf_AddDesc_cached_5fnetwork_5fparameters_2eproto_once_,
                  &protobuf_AddDesc_cached_5fnetwork_5fparameters_2eproto_impl);
 }
 #else
@@ -62,14 +62,14 @@ bool CachedNetworkParameters_PreviousConnectionState_IsValid(int value) {
   }
 }
 
-#if !defined(_MSC_VER) || _MSC_VER >= 1900
+#ifndef _MSC_VER
 const CachedNetworkParameters_PreviousConnectionState CachedNetworkParameters::SLOW_START;
 const CachedNetworkParameters_PreviousConnectionState CachedNetworkParameters::CONGESTION_AVOIDANCE;
 const CachedNetworkParameters_PreviousConnectionState CachedNetworkParameters::PreviousConnectionState_MIN;
 const CachedNetworkParameters_PreviousConnectionState CachedNetworkParameters::PreviousConnectionState_MAX;
 const int CachedNetworkParameters::PreviousConnectionState_ARRAYSIZE;
 #endif  // _MSC_VER
-#if !defined(_MSC_VER) || _MSC_VER >= 1900
+#ifndef _MSC_VER
 const int CachedNetworkParameters::kServingRegionFieldNumber;
 const int CachedNetworkParameters::kBandwidthEstimateBytesPerSecondFieldNumber;
 const int CachedNetworkParameters::kMaxBandwidthEstimateBytesPerSecondFieldNumber;
@@ -95,7 +95,7 @@ CachedNetworkParameters::CachedNetworkParameters(const CachedNetworkParameters& 
 
 void CachedNetworkParameters::SharedCtor() {
   _cached_size_ = 0;
-  serving_region_ = const_cast< ::std::string*>(&::google::protobuf::internal::GetEmptyString());
+  serving_region_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
   bandwidth_estimate_bytes_per_second_ = 0;
   max_bandwidth_estimate_bytes_per_second_ = 0;
   max_bandwidth_timestamp_seconds_ = GOOGLE_LONGLONG(0);
@@ -110,7 +110,7 @@ CachedNetworkParameters::~CachedNetworkParameters() {
 }
 
 void CachedNetworkParameters::SharedDtor() {
-  if (serving_region_ != &::google::protobuf::internal::GetEmptyString()) {
+  if (serving_region_ != &::google::protobuf::internal::kEmptyString) {
     delete serving_region_;
   }
   #ifdef GOOGLE_PROTOBUF_NO_STATIC_INITIALIZER
@@ -144,7 +144,7 @@ CachedNetworkParameters* CachedNetworkParameters::New() const {
 void CachedNetworkParameters::Clear() {
   if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
     if (has_serving_region()) {
-      if (serving_region_ != &::google::protobuf::internal::GetEmptyString()) {
+      if (serving_region_ != &::google::protobuf::internal::kEmptyString) {
         serving_region_->clear();
       }
     }
@@ -279,7 +279,7 @@ bool CachedNetworkParameters::MergePartialFromCodedStream(
             ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
           return true;
         }
-        DO_(::google::protobuf::internal::WireFormatLite::SkipField(input, tag, NULL));
+        DO_(::google::protobuf::internal::WireFormatLite::SkipField(input, tag));
         break;
       }
     }
