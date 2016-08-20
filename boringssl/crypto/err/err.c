@@ -125,9 +125,9 @@
 #include "../internal.h"
 
 
-extern const uint32_t kOpenSSLReasonValues[];
-extern const size_t kOpenSSLReasonValuesLen;
-extern const char kOpenSSLReasonStringData[];
+/*extern*/ const uint32_t kOpenSSLReasonValues[];
+/*extern*/ const size_t kOpenSSLReasonValuesLen;
+/*extern*/ const char kOpenSSLReasonStringData[];
 
 /* err_clear_data frees the optional |data| member of the given error. */
 static void err_clear_data(struct err_error_st *error) {
