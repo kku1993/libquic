@@ -63,7 +63,10 @@ static bool ReadFromFD(int fd, char* buffer, size_t bytes) {
 }
 
 void RandBytes(void* output, size_t output_length) {
-  const int urandom_fd = g_urandom_fd.Pointer()->fd();
+  // Shadow: when running shadow , g_urandom_fd is no longer valid for an
+  // unknown reason.
+  // const int urandom_fd = g_urandom_fd.Pointer()->fd();
+  const int urandom_fd = open("/dev/urandom", O_RDONLY);
   const bool success =
       ReadFromFD(urandom_fd, static_cast<char*>(output), output_length);
   CHECK(success);
