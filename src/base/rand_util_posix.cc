@@ -70,6 +70,7 @@ void RandBytes(void* output, size_t output_length) {
   const bool success =
       ReadFromFD(urandom_fd, static_cast<char*>(output), output_length);
   CHECK(success);
+  close(urandom_fd);
 }
 
 int GetUrandomFD(void) {
